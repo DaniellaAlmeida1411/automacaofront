@@ -12,6 +12,7 @@ describe('Login', () => {
         cy.get(':nth-child(3) > .css-13h41gv > .css-l9nssm').click()
         cy.get('.chakra-checkbox__control').click()
         cy.get('.css-15rwwo > .chakra-button').click()
+        cy.screenshot()
     });
     
 });
