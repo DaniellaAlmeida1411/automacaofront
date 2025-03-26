@@ -2,10 +2,10 @@ describe('Login', () => {
     it('Login com sucesso', () => {
         cy.visit('https://www.nubank.com.br/nu/conta')
         cy.wait(3000)
-        cy.get('#cpf').type('52265580155')
-        cy.get('.chakra-button > .chakra-stack').click()
+        cy.get('#cpf').type('52265580155',{ failOnStatusCode: false });
+        cy.get('.chakra-button > .chakra-stack').click()        
         cy.get('#name').type('Daniella Almeida')
-        cy.wait(3000)
+      //  cy.wait(3000)
         cy.get('#phone').type('11 973394198')
         cy.get('#email').type('daniellaalmeida@yahoo.com')
         cy.get('#emailConfirmation').type('daniellaalmeida@yahoo.com')
